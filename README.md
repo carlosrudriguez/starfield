@@ -2,11 +2,15 @@
 
 Lightweight, dependency-free starfield background effect for the browser.
 
+Live Demos:
+- Full-page example: [carlosrudriguez.github.io/starfield](https://carlosrudriguez.github.io/starfield/)
+- Container example: [carlosrudriguez.github.io/starfield/container.html](https://carlosrudriguez.github.io/starfield/container.html)
+
 Repository: [github.com/carlosrudriguez/starfield](https://github.com/carlosrudriguez/starfield)
 
 `Starfield` gives you a warp-style animated star background using one JavaScript file and no frameworks.
 
-## What This Library Does
+## ✨ What This Library Does
 
 - Renders a smooth starfield animation on a `<canvas>`
 - Works as a full-page background
@@ -14,19 +18,19 @@ Repository: [github.com/carlosrudriguez/starfield](https://github.com/carlosrudr
 - Uses time-based animation so speed feels consistent across different refresh rates
 - Applies mobile/desktop tuning (speed and trail length)
 
-## Who This README Is For
+## 👋 Who This README Is For
 
 - If you are experienced, this is the project overview and API reference.
 - If you are new to web development, follow the "Beginner Quick Start" sections step by step.
 
-## Files Included In This Repo
+## 📁 Files Included In This Repo
 
 - `index.html`: full-page background example
 - `container.html`: container-only background example
 - `starfield.js`: commented source file
 - `starfield.min.js`: production/minified build
 
-## Beginner Quick Start (Option A: Download The File)
+## 🚀 Beginner Quick Start (Option A: Download The File)
 
 Use this if you want to copy the library into your own project folder.
 
@@ -50,14 +54,14 @@ Use this if you want to copy the library into your own project folder.
 
 If you see stars in the background, setup is complete.
 
-## Beginner Quick Start (Option B: Use jsDelivr CDN)
+## 🌐 Beginner Quick Start (Option B: Use jsDelivr CDN)
 
 Use this if you do not want to copy the library file locally.
 
 1. Add this to your HTML file before `</body>`:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carlosrudriguez/starfield@main/starfield.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/carlosrudriguez/starfield@v1.0.0/starfield.min.js"></script>
 <script>
   const starfield = new Starfield({
     target: document.body,
@@ -69,10 +73,10 @@ Use this if you do not want to copy the library file locally.
 2. Open your page in a browser.
 
 Notes:
-- `@main` always pulls the latest from the main branch.
-- For production, prefer a tagged version when available (example: `@v1.0.0`) so your site does not change unexpectedly.
+- `@v1.0.0` is a pinned release and recommended for production.
+- Use `@main` only if you always want the newest version immediately.
 
-## Minimal HTML Template (Copy/Paste)
+## 🧩 Minimal HTML Template (Copy/Paste)
 
 If you want a full working page quickly:
 
@@ -111,7 +115,7 @@ If you want a full working page quickly:
 </html>
 ```
 
-## Container Mode Example
+## 🗂️ Container Mode Example
 
 Use this when you want stars only inside a specific area:
 
@@ -130,7 +134,7 @@ Use this when you want stars only inside a specific area:
 </script>
 ```
 
-## API
+## 🛠️ API
 
 Create an instance:
 
@@ -145,7 +149,7 @@ Methods:
 - `sf.resize()` Recalculate dimensions and regenerate stars
 - `sf.destroy()` Remove canvas and listeners completely
 
-## Configuration Options
+## ⚙️ Configuration Options
 
 All options are optional.
 
@@ -167,7 +171,18 @@ All options are optional.
 | `mobileBreakpoint` | `900` | Viewport threshold used by mobile detection |
 | `dprCap` | `2` | Caps device pixel ratio for performance |
 
-## Troubleshooting
+## 🌍 Browser Support
+
+Tested for modern browsers with Canvas 2D support:
+
+- Chrome (desktop/mobile)
+- Safari (macOS/iOS)
+- Firefox
+- Edge
+
+For best performance on low-end devices, reduce `starCount` and/or `dprCap`.
+
+## 🧯 Troubleshooting
 
 If you do not see the effect:
 
@@ -176,12 +191,12 @@ If you do not see the effect:
 3. If canvas is hidden behind page background, set `zIndex: 0` and give your content `position: relative; z-index: 1;`.
 4. If using container mode, ensure container has a non-zero width/height.
 
-## Publishing Notes
+## 📣 Publishing Notes
 
 - This repo can be served via GitHub Pages for live demos.
 - jsDelivr can serve directly from this GitHub repo with no extra setup.
 
-## License
+## 📜 License
 
 This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
