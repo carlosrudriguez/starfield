@@ -2,6 +2,8 @@
 
 Lightweight, dependency-free starfield background effect for the browser.
 
+![Starfield Preview](./starfield.gif)
+
 Live Demos:
 - Full-page example: [carlosrudriguez.github.io/starfield](https://carlosrudriguez.github.io/starfield/)
 - Container example: [carlosrudriguez.github.io/starfield/container.html](https://carlosrudriguez.github.io/starfield/container.html)
