@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starfield.js Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #000;
+      color: #e7edf7;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .nav {
+      display: inline-flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav a {
+      color: #d7f2ff;
+      text-decoration: none;
+      border: 1px solid rgba(215, 242, 255, 0.35);
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      background: rgba(5, 20, 32, 0.35);
+    }
+
+    .nav a[aria-current="page"] {
+      border-color: rgba(215, 242, 255, 0.8);
+      background: rgba(5, 20, 32, 0.6);
+    }
+
+    .panel {
+      max-width: 760px;
+      background: rgba(3, 8, 20, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      backdrop-filter: blur(3px);
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(1.4rem, 3.4vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 0.6rem;
+      opacity: 0.92;
+      line-height: 1.5;
+      font-size: 0.96rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="content">
+    <nav class="nav" aria-label="Examples">
+      <a href="./index.html" aria-current="page">Full-Page Example</a>
+      <a href="./container.html">Container Example</a>
+    </nav>
+    <section class="panel">
+      <h1>Starfield.js</h1>
+      <p>
+        Lightweight, dependency-free starfield background library for the browser.
+      </p>
+      <p>
+        This page shows the full-page background mode. Use the links above to switch
+        to the container mode demo.
+      </p>
+    </section>
+  </main>
+
+  <script src="./starfield.min.js"></script>
+  <script>
+    const starfield = new Starfield({
+      target: document.body,
+      fullPage: true,
+      zIndex: 0
+    });
+
+    window.starfield = starfield;
+  </script>
+</body>
+</html>
